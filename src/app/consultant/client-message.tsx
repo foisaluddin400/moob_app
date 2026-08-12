@@ -9,10 +9,13 @@ import {
   SafeAreaView,
   KeyboardAvoidingView,
   Platform,
+  Image,
 } from 'react-native';
 import { Ionicons, Feather } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
 
-export default function AITab() {
+export default function ClientMessageChat() {
+  const router = useRouter();
   const [inputText, setInputText] = useState('');
 
   return (
@@ -23,7 +26,15 @@ export default function AITab() {
       >
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.headerTitle}>AI Assistant</Text>
+                          <TouchableOpacity style={styles.backBtn} onPress={() => router.back()} activeOpacity={0.7}>
+                              <Feather name="arrow-left" size={18} color="#00a9b5" />
+                          </TouchableOpacity>
+                          <Text style={styles.headerTitle}>Chat</Text>
+                          <View style={{ width: 36 }} />
+                      </View>
+        {/* User Info Sub-Header */}
+        <View style={styles.userSubHeader}>
+          <Text style={styles.userName}>Sarah Jenkins</Text>
           <View style={styles.statusRow}>
             <View style={styles.onlineDot} />
             <Text style={styles.statusText}>Online</Text>
@@ -39,10 +50,11 @@ export default function AITab() {
           {/* Outgoing Message 1 */}
           <View style={styles.outgoingContainer}>
             <View style={styles.avatarRowRight}>
-              <View style={[styles.avatar, styles.userAvatar]}>
-                <Ionicons name="person" size={12} color="#ffffff" />
-              </View>
-              <Text style={styles.senderName}>AI Assistant</Text>
+              <Image
+                source={{ uri: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop' }}
+                style={styles.avatarImage}
+              />
+              <Text style={styles.senderName}>Sarah Jenkins</Text>
             </View>
             <View style={styles.outgoingBubble}>
               <Text style={styles.outgoingText}>
@@ -54,10 +66,11 @@ export default function AITab() {
           {/* Incoming Message 1 */}
           <View style={styles.incomingContainer}>
             <View style={styles.avatarRowLeft}>
-              <View style={[styles.avatar, styles.botAvatar]}>
-                <Feather name="cpu" size={12} color="#00C7CC" />
-              </View>
-              <Text style={styles.senderName}>AI Assistant</Text>
+              <Image
+                source={{ uri: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop' }}
+                style={styles.avatarImage}
+              />
+              <Text style={styles.senderName}>Mike T.</Text>
             </View>
             <View style={styles.incomingBubble}>
               <Text style={styles.incomingText}>
@@ -70,10 +83,11 @@ export default function AITab() {
           {/* Incoming Message 2 */}
           <View style={styles.incomingContainer}>
             <View style={styles.avatarRowLeft}>
-              <View style={[styles.avatar, styles.botAvatar]}>
-                <Feather name="cpu" size={12} color="#00C7CC" />
-              </View>
-              <Text style={styles.senderName}>AI Assistant</Text>
+              <Image
+                source={{ uri: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop' }}
+                style={styles.avatarImage}
+              />
+              <Text style={styles.senderName}>Mike T.</Text>
             </View>
             <View style={styles.incomingBubble}>
               <Text style={styles.incomingText}>
@@ -86,15 +100,15 @@ export default function AITab() {
           {/* Outgoing Message 2 with Quoted Reply */}
           <View style={styles.outgoingContainer}>
             <View style={styles.avatarRowRight}>
-              <View style={[styles.avatar, styles.userAvatar]}>
-                <Ionicons name="person" size={12} color="#ffffff" />
-              </View>
-              <Text style={styles.senderName}>Mike T.</Text>
+              <Image
+                source={{ uri: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop' }}
+                style={styles.avatarImage}
+              />
+              <Text style={styles.senderName}>Sarah Jenkins</Text>
             </View>
             <View style={styles.outgoingBubble}>
               {/* Quoted Message Card */}
               <View style={styles.quoteCard}>
-                <View style={styles.quoteIndicator} />
                 <View style={styles.quoteContent}>
                   <Text style={styles.quoteAuthor}>Mike T.</Text>
                   <Text style={styles.quoteText} numberOfLines={1}>
@@ -110,7 +124,7 @@ export default function AITab() {
 
             <View style={styles.readReceiptRow}>
               <Text style={styles.timestampRight}>10:20 AM</Text>
-              <Ionicons name="checkmark-done" size={14} color="#00C7CC" />
+              <Ionicons name="checkmark-done" size={15} color="#00B2B2" />
             </View>
           </View>
         </ScrollView>
@@ -118,21 +132,21 @@ export default function AITab() {
         {/* Input Bar Footer */}
         <View style={styles.inputContainer}>
           <TouchableOpacity style={styles.attachmentBtn} activeOpacity={0.7}>
-            <Feather name="paperclip" size={20} color="#64748b" />
+            <Feather name="paperclip" size={22} color="#64748b" />
           </TouchableOpacity>
 
           <View style={styles.textInputWrapper}>
             <TextInput
               style={styles.textInput}
               placeholder="Type a message..."
-              placeholderTextColor="#cbd5e1"
+              placeholderTextColor="#94a3b8"
               value={inputText}
               onChangeText={setInputText}
             />
           </View>
 
           <TouchableOpacity style={styles.micBtn} activeOpacity={0.8}>
-            <Feather name="mic" size={20} color="#64748b" />
+            <Feather name="mic" size={20} color="#ffffff" />
           </TouchableOpacity>
         </View>
       </KeyboardAvoidingView>
@@ -147,70 +161,81 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: '#fdfdff',
+    backgroundColor: '#ffffff',
   },
 
   /* Header */
   header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
     paddingHorizontal: 20,
-    paddingTop: 12,
-    paddingBottom: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: '#f0f4f8',
-    backgroundColor: '#ffffff',
+    paddingVertical: 12,
+  },
+  backBtn: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: '#e6f7f7',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   headerTitle: {
+    fontSize: 18,
+    color: '#1e293b',
+    fontFamily: 'Montserrat_500Medium',
+  },
+
+  /* User Sub Header */
+  userSubHeader: {
+    paddingHorizontal: 20,
+    paddingBottom: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: '#b2ecec',
+  },
+  userName: {
     fontSize: 22,
-    fontWeight: '700',
     color: '#0f172a',
-    fontFamily: 'Montserrat_700Bold',
+    marginBottom: 4,
+    fontFamily: 'Montserrat_600SemiBold',
   },
   statusRow: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
-    marginTop: 4,
   },
   onlineDot: {
     width: 7,
     height: 7,
     borderRadius: 3.5,
-    backgroundColor: '#10b981',
+    backgroundColor: '#22c55e',
   },
   statusText: {
-    fontSize: 12,
-    color: '#10b981',
+    fontSize: 13,
+    color: '#22c55e',
     fontFamily: 'Montserrat_400Regular',
   },
 
-  /* Chat List */
+  /* Chat Scroll */
   chatContainer: {
     flex: 1,
   },
   scrollContent: {
     paddingHorizontal: 16,
-    paddingTop: 20,
-    paddingBottom: 24,
+    paddingTop: 16,
+    paddingBottom: 20,
   },
 
-  /* Common Bubble Styling */
+  /* Avatar & Names */
   senderName: {
-    fontSize: 11,
-    color: '#94a3b8',
-    fontFamily: 'Montserrat_400Regular',
+    fontSize: 12,
+    color: '#64748b',
+    fontFamily: 'Montserrat_500Medium',
   },
-  avatar: {
-    width: 20,
-    height: 20,
-    borderRadius: 10,
-    justifyContent:'center',
-    alignItems: 'center',
-  },
-  botAvatar: {
-    backgroundColor: '#e6f9fa',
-  },
-  userAvatar: {
-    backgroundColor: '#8d6e63',
+  avatarImage: {
+    width: 22,
+    height: 22,
+    borderRadius: 11,
   },
 
   /* Incoming Message (Left) */
@@ -226,28 +251,23 @@ const styles = StyleSheet.create({
     marginBottom: 6,
   },
   incomingBubble: {
-    backgroundColor: '#ffffff',
+    backgroundColor: 'white',
     borderWidth: 1,
-    borderColor: '#f1f5f9',
+    borderColor: '#e2e8f0',
     borderRadius: 18,
     borderTopLeftRadius: 4,
     paddingHorizontal: 16,
     paddingVertical: 12,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.03,
-    shadowRadius: 3,
-    elevation: 1,
   },
   incomingText: {
     fontSize: 13,
-    color: '#1e293b',
+    color: '#334155',
     lineHeight: 19,
     fontFamily: 'Montserrat_400Regular',
   },
   timestamp: {
     fontSize: 10,
-    color: '#cbd5e1',
+    color: '#94a3b8',
     marginTop: 4,
     marginLeft: 4,
     fontFamily: 'Montserrat_400Regular',
@@ -280,20 +300,12 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat_400Regular',
   },
 
-  /* Quoted Reply Card */
+  /* Quoted Card */
   quoteCard: {
-    flexDirection: 'row',
-    backgroundColor: 'rgba(255, 255, 255, 0.22)',
+    backgroundColor: 'rgba(255, 255, 255, 0.25)',
     borderRadius: 8,
     padding: 8,
     marginBottom: 10,
-    overflow: 'hidden',
-  },
-  quoteIndicator: {
-    width: 3,
-    backgroundColor: '#ffffff',
-    borderRadius: 2,
-    marginRight: 8,
   },
   quoteContent: {
     flex: 1,
@@ -301,40 +313,36 @@ const styles = StyleSheet.create({
   quoteAuthor: {
     fontSize: 11,
     color: '#ffffff',
-    fontWeight: '600',
-    fontFamily: 'Montserrat_600SemiBold',
     marginBottom: 2,
+    fontFamily: 'Montserrat_400Regular',
   },
   quoteText: {
     fontSize: 11,
-    color: 'rgba(255, 255, 255, 0.85)',
+    color: 'rgba(255, 255, 255, 0.9)',
     fontFamily: 'Montserrat_400Regular',
   },
 
-  /* Read Receipt & Timestamp */
+  /* Read Receipt */
   readReceiptRow: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-end',
     gap: 4,
     marginTop: 4,
-    marginRight: 2,
   },
   timestampRight: {
     fontSize: 10,
-    color: '#cbd5e1',
+    color: '#94a3b8',
     fontFamily: 'Montserrat_400Regular',
   },
 
-  /* Input Footer Bar */
+  /* Input Footer */
   inputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 16,
     paddingVertical: 12,
     backgroundColor: '#ffffff',
-    borderTopWidth: 1,
-    borderTopColor: '#f1f5f9',
     gap: 10,
   },
   attachmentBtn: {
@@ -359,7 +367,7 @@ const styles = StyleSheet.create({
     width: 42,
     height: 42,
     borderRadius: 21,
-    backgroundColor: '#f1f5f9',
+    backgroundColor: '#e2e8f0',
     justifyContent: 'center',
     alignItems: 'center',
   },

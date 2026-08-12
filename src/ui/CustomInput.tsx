@@ -16,7 +16,7 @@ import {
 
 interface CustomInputProps extends TextInputProps {
   label?: string;
-  iconName?: 'mail' | 'lock';
+  iconName?: React.ComponentProps<typeof Feather>['name']; // Allow all Feather icons dynamically
   isPassword?: boolean;
 }
 
@@ -34,16 +34,17 @@ export default function CustomInput({
       {label && <Text style={styles.label}>{label}</Text>}
 
       <View style={styles.inputContainer}>
-        {/* Left Icon */}
-        {iconName === 'mail' && (
+        {/* Left Icon (Dynamic Render) */}
+        {iconName && iconName !== 'lock' && (
           <Feather
-            name="mail"
+            name={iconName}
             size={20}
             color="#a0aec0"
             style={styles.icon}
           />
         )}
 
+        {/* Custom lock icon using MaterialCommunityIcons if lock is passed */}
         {iconName === 'lock' && (
           <MaterialCommunityIcons
             name="lock-outline"

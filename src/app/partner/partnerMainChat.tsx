@@ -14,7 +14,7 @@ import {
 import { useRouter, useLocalSearchParams } from 'expo-router';
 import { Feather, Ionicons } from '@expo/vector-icons';
 
-export default function PartnerMessages() {
+export default function partnerMainChat() {
   const router = useRouter();
   const params = useLocalSearchParams();
 
@@ -28,7 +28,18 @@ export default function PartnerMessages() {
         style={{ flex: 1 }}
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       >
-   
+        {/* Header */}
+        <View style={styles.header}>
+          <TouchableOpacity
+            style={styles.backCircle}
+            onPress={() => router.back()}
+            activeOpacity={0.7}
+          >
+            <Feather name="arrow-left" size={20} color="#00a9b5" />
+          </TouchableOpacity>
+          <Text style={styles.headerTitle}>Message</Text>
+          <View style={{ width: 40 }} />
+        </View>
 
         {/* User Status Bar */}
         <View style={styles.userInfoBar}>

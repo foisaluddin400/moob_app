@@ -83,6 +83,8 @@ export default function ClientRequestQueue() {
         <TouchableOpacity
           style={styles.card}
           activeOpacity={0.7}
+          onPress={() => router.push('/consultant/review-request')}
+          
         >
           <View style={styles.cardHeader}>
             <View style={styles.clientInfo}>
@@ -142,6 +144,7 @@ export default function ClientRequestQueue() {
         <TouchableOpacity
           style={styles.card}
           activeOpacity={0.7}
+          onPress={() => router.push('/consultant/review-request')}
         >
           <View style={styles.cardHeader}>
             <View style={styles.clientInfo}>
@@ -201,6 +204,7 @@ export default function ClientRequestQueue() {
         <TouchableOpacity
           style={styles.card}
           activeOpacity={0.7}
+          onPress={() => router.push('/consultant/review-request')}
         >
           <View style={styles.cardHeader}>
             <View style={styles.clientInfo}>

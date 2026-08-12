@@ -12,7 +12,7 @@ import { useRouter } from 'expo-router';
 import {
   Feather,
   Ionicons,
-  MaterialCommunityIcons,
+
   Octicons,
 } from '@expo/vector-icons';
 import Icon from '@/icon/icon';
@@ -39,7 +39,7 @@ export default function ConsultantHome() {
 
           <View style={styles.headerRight}>
             {/* Notification Bell Badge */}
-            <TouchableOpacity style={styles.bellBtn} activeOpacity={0.7}>
+            <TouchableOpacity onPress={() => router.push('/notification')} style={styles.bellBtn} activeOpacity={0.7}>
               <Ionicons name="notifications-outline" size={20} color="#0f172a" />
               <View style={styles.badge}>
                 <Text style={styles.badgeText}>2</Text>
@@ -116,7 +116,7 @@ export default function ConsultantHome() {
         </View>
 
         {/* Request Item 1 */}
-        <TouchableOpacity style={styles.card} activeOpacity={0.7}>
+        <TouchableOpacity onPress={() => router.push('/consultant/request-details')} style={styles.card} activeOpacity={0.7}>
           <View style={styles.cardHeader}>
             <Text style={styles.clientName}>Elena Rodriguez</Text>
             <Feather name="chevron-right" size={18} color="#cbd5e1" />
