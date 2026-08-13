@@ -39,7 +39,7 @@ export default function RequestDocument() {
         {/* Header */}
         <View style={styles.header}>
           <TouchableOpacity style={styles.backBtn} onPress={() => router.back()} activeOpacity={0.7}>
-            <Feather name="arrow-left" size={18} color="#00a9b5" />
+            <Feather name="arrow-left" size={18} color="#00B2B7" />
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Request documents</Text>
           <View style={{ width: 36 }} />
@@ -57,7 +57,7 @@ export default function RequestDocument() {
                 <Text style={styles.docSub}>Identity</Text>
               </View>
               <View style={styles.reqBadge}>
-                <Feather name="sliders" size={12} color="#00a9b5" />
+                <Feather name="sliders" size={12} color="#00B2B7" />
                 <Text style={styles.reqBadgeText}>{idx < 2 ? 'Req' : 'Opt'}</Text>
               </View>
             </View>
@@ -93,7 +93,7 @@ export default function RequestDocument() {
             {tags.map((tag, idx) => (
               <TouchableOpacity key={idx} style={styles.chip} onPress={() => removeTag(tag)}>
                 <Text style={styles.chipText}>{tag}</Text>
-                <Feather name="x" size={12} color="#00a9b5" />
+                <Feather name="x" size={12} color="#00B2B7" />
               </TouchableOpacity>
             ))}
           </View>
@@ -128,11 +128,11 @@ const styles = StyleSheet.create({
   headerTitle: { fontSize: 16, fontWeight: '600', color: '#0f172a', fontFamily: 'Montserrat_600SemiBold' },
   mainCard: { backgroundColor: '#ffffff', borderRadius: 4, borderWidth: 1, borderColor: '#f1f5f9', padding: 14, marginBottom: 20 },
   checkedBox: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#EAFDFD', borderWidth: 1, borderColor: '#9FFDFF', borderRadius: 4, padding: 10, marginBottom: 8, gap: 10 },
-  checkSquare: { width: 28, height: 28, backgroundColor: '#00a9b5', borderRadius: 3, justifyContent: 'center', alignItems: 'center' },
+  checkSquare: { width: 28, height: 28, backgroundColor: '#00B2B7', borderRadius: 3, justifyContent: 'center', alignItems: 'center' },
   docTitle: { fontSize: 14, fontWeight: '400', color: '#0f172a', fontFamily: 'Montserrat_400Regular' },
   docSub: { fontSize: 11, color: '#94a3b8', fontFamily: 'Montserrat_400Regular' },
   reqBadge: { flexDirection: 'row', alignItems: 'center', gap: 4, backgroundColor: '#ffffff', paddingHorizontal: 8, paddingVertical: 4, borderRadius: 3 },
-  reqBadgeText: { fontSize: 11, color: '#00a9b5', fontWeight: '500', fontFamily: 'Montserrat_500Medium' },
+  reqBadgeText: { fontSize: 11, color: '#00B2B7', fontWeight: '500', fontFamily: 'Montserrat_500Medium' },
   uncheckedBox: { flexDirection: 'row', alignItems: 'center', borderWidth: 1, borderColor: '#f1f5f9', borderRadius: 4, padding: 10, marginBottom: 8, gap: 10 },
   emptySquare: { width: 24, height: 24, borderRadius: 6, borderWidth: 1.5, borderColor: '#cbd5e1' },
   addInputRow: { flexDirection: 'row', gap: 8, marginTop: 8, marginBottom: 12 },
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
   addBtn: { width: 44, height: 44, backgroundColor: '#f1f5f9', borderRadius: 4, justifyContent: 'center', alignItems: 'center' },
   chipContainer: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 16 },
   chip: { flexDirection: 'row', alignItems: 'center', gap: 4, backgroundColor: '#eafdfd', paddingHorizontal: 10, paddingVertical: 6, borderRadius: 4 },
-  chipText: { fontSize: 12, color: '#00a9b5', fontWeight: '500', fontFamily: 'Montserrat_500Medium' },
+  chipText: { fontSize: 12, color: '#00B2B7', fontWeight: '500', fontFamily: 'Montserrat_500Medium' },
   noticeBox: { backgroundColor: '#f8fafc', padding: 12, borderRadius: 4 },
   noticeText: { fontSize: 12, color: '#64748b', lineHeight: 18, fontFamily: 'Montserrat_400Regular' },
   sendBtn: { flexDirection: 'row', justifyContent: 'center', alignItems: 'center', backgroundColor: '#00B2B7', height: 48, borderRadius: 2 },

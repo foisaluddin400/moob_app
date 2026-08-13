@@ -25,7 +25,7 @@ export default function RequestDetails() {
                 {/* Top Header */}
                 <View style={styles.header}>
                     <TouchableOpacity style={styles.backBtn} onPress={() => router.back()} activeOpacity={0.7}>
-                        <Feather name="arrow-left" size={18} color="#00a9b5" />
+                        <Feather name="arrow-left" size={18} color="#00B2B7" />
                     </TouchableOpacity>
                     <Text style={styles.headerTitle}>Request details</Text>
                     <View style={{ width: 36 }} />
@@ -45,7 +45,7 @@ export default function RequestDetails() {
                 {/* Client Profile Card */}
                 <View style={styles.card}>
                     <View style={styles.cardTitleRow}>
-                        <Feather name="user" size={16} color="#00a9b5" />
+                        <Feather name="user" size={16} color="#00B2B7" />
                         <Text style={styles.cardTitle}>Client profile</Text>
                     </View>
                     <View>
@@ -74,7 +74,7 @@ export default function RequestDetails() {
                 {/* Request details info block */}
                 <View style={styles.card}>
                     <View style={styles.cardTitleRow}>
-                        <Feather name="file-text" size={16} color="#00a9b5" />
+                        <Feather name="file-text" size={16} color="#00B2B7" />
                         <Text style={styles.cardTitle}>Request details</Text>
                     </View>
                     <View style={styles.gridRow}><Text style={styles.label}>PURPOSE</Text><Text style={styles.value}>Citizenship</Text></View>
@@ -94,7 +94,7 @@ export default function RequestDetails() {
                     <View key={index} style={styles.card}>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-                                <Feather name="file-text" size={16} color="#00a9b5" />
+                                <Feather name="file-text" size={16} color="#00B2B7" />
                                 <Text style={styles.cardTitle}>Passport</Text>
                             </View>
                             <View style={styles.uploadBadge}><Text style={styles.uploadText}>Upload needed</Text></View>
@@ -113,7 +113,7 @@ export default function RequestDetails() {
                     onPress={() => router.push('/consultant/request-document' as any)}
                     activeOpacity={0.8}
                 >
-                    <Feather name="file-plus" size={16} color="#00a9b5" />
+                    <Feather name="file-plus" size={16} color="#00B2B7" />
                     <Text style={styles.outlineBtnText}>Request additional documents</Text>
                 </TouchableOpacity>
 
@@ -134,7 +134,7 @@ export default function RequestDetails() {
                 {/* Guidance Banner */}
                 <View style={styles.guidanceBanner}>
                     <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 4 }}>
-                        <Feather name="check-square" size={16} color="#00a9b5" />
+                        <Feather name="check-square" size={16} color="#00B2B7" />
                         <Text style={styles.guidanceTitle}>Immigration guidance</Text>
                     </View>
                     <Text style={styles.guidanceText}>
@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
     reqTitle: { fontSize: 18, fontWeight: '500', color: '#0f172a', fontFamily: 'Montserrat_500Medium' },
     card: { backgroundColor: '#FFFFFF', borderWidth: 1, borderColor: '#F2F2F2', borderRadius: 4, padding: 14, marginBottom: 12 },
     cardTitleRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 10 },
-    cardTitle: { fontSize: 15, fontWeight: '500', color: '#00a9b5', fontFamily: 'Montserrat_500Medium' },
+    cardTitle: { fontSize: 15, fontWeight: '500', color: '#00B2B7', fontFamily: 'Montserrat_500Medium' },
     infoLine: { fontSize: 13, color: '#475569', marginBottom: 6, fontFamily: 'Montserrat_400Regular' },
     gridRow: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 8 },
     label: { fontSize: 12, fontWeight: '400',color: '#595d63ff',  fontFamily: 'Montserrat_400Regular' },
@@ -201,24 +201,24 @@ const styles = StyleSheet.create({
     fileAttachment: { flexDirection: 'row', alignItems: 'center', gap: 8, backgroundColor: '#f8fafc', padding: 10, borderRadius: 4, marginTop: 8 },
     fileName: { fontSize: 12, color: '#64748b', fontFamily: 'Montserrat_400Regular' },
     uploadBadge: { backgroundColor: '#eafdfd', paddingHorizontal: 8, paddingVertical: 3, borderRadius: 3 },
-    uploadText: { fontSize: 11, color: '#00a9b5', fontFamily: 'Montserrat_400Regular' },
+    uploadText: { fontSize: 11, color: '#00B2B7', fontFamily: 'Montserrat_400Regular' },
     noFileText: { fontSize: 12, color: '#94a3b8', marginVertical: 8, fontFamily: 'Montserrat_400Regular' },
     waitingBanner: { flexDirection: 'row', alignItems: 'center', gap: 6, backgroundColor: '#F7F7F8', padding: 8, borderRadius: 4 },
     waitingText: { fontSize: 11, color: '#64748b', fontFamily: 'Montserrat_400Regular' },
-    outlineBtn: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, borderWidth: 1, borderColor: '#00a9b5', height: 44, borderRadius: 4, marginBottom: 20 },
-    outlineBtnText: { color: '#00a9b5', fontSize: 13, fontWeight: '400', fontFamily: 'Montserrat_400Regular' },
+    outlineBtn: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, borderWidth: 1, borderColor: '#00B2B7', height: 44, borderRadius: 4, marginBottom: 20 },
+    outlineBtnText: { color: '#00B2B7', fontSize: 13, fontWeight: '400', fontFamily: 'Montserrat_400Regular' },
     sectionHeader: { fontSize: 14, fontWeight: '600', color: '#0f172a', marginBottom: 8, fontFamily: 'Montserrat_600SemiBold' },
     textArea: { backgroundColor: '#ffffff', borderWidth: 1, borderColor: '#e2e8f0', borderRadius: 4, height: 90, padding: 10, textAlignVertical: 'top', fontSize: 13, color: '#334155', fontFamily: 'Montserrat_400Regular' },
     saveNotesBtn: { alignSelf: 'flex-start', backgroundColor: '#f1f5f9', paddingHorizontal: 12, paddingVertical: 6, borderRadius: 4, marginTop: 8, marginBottom: 20 },
     saveNotesText: { fontSize: 12, color: '#475569', fontWeight: '500', fontFamily: 'Montserrat_500Medium' },
     guidanceBanner: { backgroundColor: '#ffffff', borderWidth: 1, borderColor: '#f1f5f9', padding: 14, borderRadius: 4, marginBottom: 20 },
-    guidanceTitle: { fontSize: 14, fontWeight: '600', color: '#00a9b5', fontFamily: 'Montserrat_600SemiBold' },
+    guidanceTitle: { fontSize: 14, fontWeight: '600', color: '#00B2B7', fontFamily: 'Montserrat_600SemiBold' },
     guidanceText: { fontSize: 12, color: '#64748b', lineHeight: 18, fontFamily: 'Montserrat_400Regular' },
-    primaryBtn: { backgroundColor: '#00a9b5', height: 48, borderRadius: 2, justifyContent: 'center', alignItems: 'center' },
+    primaryBtn: { backgroundColor: '#00B2B7', height: 48, borderRadius: 2, justifyContent: 'center', alignItems: 'center' },
     primaryBtnText: { color: '#ffffff', fontSize: 14, fontWeight: '600', fontFamily: 'Montserrat_600SemiBold' },
     modalOverlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.4)', justifyContent: 'flex-end' },
     bottomSheet: { backgroundColor: '#ffffff', borderTopLeftRadius: 16, borderTopRightRadius: 16, padding: 20 },
     handleBar: { width: 36, height: 4, backgroundColor: '#cbd5e1', borderRadius: 2, alignSelf: 'center', marginBottom: 16 },
-    modalTitle: { fontSize: 16, fontWeight: '600', color: '#00a9b5', marginBottom: 8, fontFamily: 'Montserrat_600SemiBold' },
+    modalTitle: { fontSize: 16, fontWeight: '600', color: '#00B2B7', marginBottom: 8, fontFamily: 'Montserrat_600SemiBold' },
     modalSub: { fontSize: 13, color: '#64748b', marginBottom: 20, lineHeight: 18, fontFamily: 'Montserrat_400Regular' },
 });

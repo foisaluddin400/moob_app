@@ -408,7 +408,7 @@ const styles = StyleSheet.create({
   },
 
   newRequestText: {
-    color: '#00a9b5',
+    color: '#00B2B7',
   },
 
   inReviewBadge: {

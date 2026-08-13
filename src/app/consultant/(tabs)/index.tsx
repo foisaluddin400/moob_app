@@ -80,7 +80,7 @@ export default function ConsultantHome() {
 
           <View style={styles.metricCard}>
             <View style={[styles.iconBox, { backgroundColor: '#e6f7f8' }]}>
-              <Feather name="clock" size={20} color="#00a9b5" />
+              <Feather name="clock" size={20} color="#00B2B7" />
             </View>
             <Text style={styles.metricNumber}>1</Text>
             <Text style={styles.metricLabel}>Waiting</Text>
@@ -123,7 +123,7 @@ export default function ConsultantHome() {
           </View>
           <View style={styles.cardFooter}>
             <View style={[styles.statusBadge, { backgroundColor: '#e6f7f8' }]}>
-              <Text style={[styles.statusText, { color: '#00a9b5' }]}>
+              <Text style={[styles.statusText, { color: '#00B2B7' }]}>
                 Under Review
               </Text>
             </View>
@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 2,
     right: 2,
-    backgroundColor: '#00a9b5',
+    backgroundColor: '#00B2B7',
     width: 16,
     height: 16,
     borderRadius: 8,
@@ -251,7 +251,7 @@ const styles = StyleSheet.create({
   },
   welcomeName: {
     fontSize: 26,
-    color: '#00a9b5',
+    color: '#00B2B7',
    
     marginTop: 2,
     fontFamily: 'Montserrat_500Medium',
@@ -347,7 +347,7 @@ const styles = StyleSheet.create({
   },
   seeAllText: {
     fontSize: 14,
-    color: '#00a9b5',
+    color: '#00B2B7',
     fontWeight: '500',
     fontFamily: 'Montserrat_400Regular',
   },

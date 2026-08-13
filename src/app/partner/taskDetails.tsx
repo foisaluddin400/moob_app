@@ -65,7 +65,7 @@ export default function TaskDetailsScreen() {
             onPress={() => router.back()}
             activeOpacity={0.7}
           >
-            <Feather name="arrow-left" size={20} color="#00a9b5" />
+            <Feather name="arrow-left" size={20} color="#00B2B7" />
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Task Detail</Text>
           <View style={{ width: 42 }} />
@@ -124,7 +124,7 @@ export default function TaskDetailsScreen() {
               <Feather name="file-text" size={18} color="#475569" />
               <Text style={styles.fileName}>Original Document.pdf</Text>
             </View>
-            <Feather name="download" size={18} color="#00a9b5" />
+            <Feather name="download" size={18} color="#00B2B7" />
           </View>
 
           <View style={styles.fileRow}>
@@ -132,7 +132,7 @@ export default function TaskDetailsScreen() {
               <Feather name="file-text" size={18} color="#475569" />
               <Text style={styles.fileName}>Instructions.pdf</Text>
             </View>
-            <Feather name="download" size={18} color="#00a9b5" />
+            <Feather name="download" size={18} color="#00B2B7" />
           </View>
         </View>
 
@@ -297,7 +297,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#00a9b5',
+    color: '#00B2B7',
     marginBottom: 10,
     fontFamily: 'Montserrat_600SemiBold',
   },

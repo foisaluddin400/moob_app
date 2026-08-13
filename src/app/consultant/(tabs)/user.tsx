@@ -12,7 +12,7 @@ export default function ConsultantUserTab() {
       {/* Profile Header Banner */}
       <TouchableOpacity 
         style={styles.profileBanner} 
-        onPress={() => router.push('/consultant/editProfile')}
+        onPress={() => router.push('/editProfile')}
         activeOpacity={0.8}
       >
         <Image
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
   },
   profileSubtitle: {
     fontSize: 12,
-    color: '#00a9b5',
+    color: '#00B2B7',
     marginTop: 2,
     fontFamily: 'Montserrat_400Regular',
   },

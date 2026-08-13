@@ -35,7 +35,7 @@ export default function MainChat() {
             onPress={() => router.back()}
             activeOpacity={0.7}
           >
-            <Feather name="arrow-left" size={20} color="#00a9b5" />
+            <Feather name="arrow-left" size={20} color="#00B2B7" />
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Message</Text>
           <View style={{ width: 40 }} />
@@ -282,7 +282,7 @@ const styles = StyleSheet.create({
     padding: 14,
   },
   outgoingBubble: {
-    backgroundColor: '#00a9b5', // Exact Teal Color from screenshot
+    backgroundColor: '#00B2B7', // Exact Teal Color from screenshot
     borderTopRightRadius: 2,
   },
   incomingBubble: {
