@@ -33,7 +33,7 @@ export default function HelpSupport() {
           onPress={() => router.back()}
           activeOpacity={0.7}
         >
-          <Feather name="arrow-left" size={20} color="#00a9b5" />
+          <Feather name="arrow-left" size={20} color="#00B2B7" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Help & Support</Text>
         <View style={{ width: 40 }} />
@@ -48,7 +48,7 @@ export default function HelpSupport() {
         {/* Email Us Online Box */}
         <View style={styles.emailBox}>
           <View style={styles.emailIconBox}>
-            <Feather name="mail" size={20} color="#00a9b5" />
+            <Feather name="mail" size={20} color="#00B2B7" />
           </View>
           <View>
             <Text style={styles.emailBoxTitle}>Email Us</Text>
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
     height: 40,
     borderRadius: 4,
     borderWidth: 1,
-    borderColor: '#00a9b5',
+    borderColor: '#00B2B7',
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 12,
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
     paddingTop: 10,
   },
   sendBtn: {
-    backgroundColor: '#00a9b5',
+    backgroundColor: '#00B2B7',
     height: 46,
     borderRadius: 2,
     justifyContent: 'center',

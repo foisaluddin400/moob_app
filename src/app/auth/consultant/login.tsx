@@ -52,12 +52,12 @@ export default function ConsultantLogin() {
           onPress={() => setKeepTrusted(!keepTrusted)}
         >
           <View style={[styles.checkbox, keepTrusted && styles.checked]}>
-            {keepTrusted && <Feather name="check" size={12} color="#00a9b5" />}
+            {keepTrusted && <Feather name="check" size={12} color="#00B2B7" />}
           </View>
           <Text style={styles.checkboxLabel}>Keep this device trusted</Text>
         </Pressable>
 
-        <TouchableOpacity style={styles.forgotBtn}>
+        <TouchableOpacity  onPress={() => router.push('/forgotPass')} style={styles.forgotBtn}>
           <Text style={styles.forgotText}>Forgot password?</Text>
         </TouchableOpacity>
       </View>
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     fontWeight: '500',
-    color: '#00a9b5',
+    color: '#00B2B7',
     lineHeight: 38,
     marginBottom: 12,
   },
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
     width: 18,
     height: 18,
     borderWidth: 1.5,
-    borderColor: '#00a9b5',
+    borderColor: '#00B2B7',
     borderRadius: 3,
     justifyContent: 'center',
     alignItems: 'center',
@@ -144,11 +144,11 @@ const styles = StyleSheet.create({
     paddingVertical: 2,
   },
   forgotText: {
-    color: '#00a9b5',
+    color: '#00B2B7',
     fontSize: 13,
   },
   button: {
-    backgroundColor: '#00a9b5',
+    backgroundColor: '#00B2B7',
     height: 48,
     borderRadius: 4,
     justifyContent: 'center',
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   createProfileText: {
-    color: '#00a9b5',
+    color: '#00B2B7',
     fontWeight: '500',
   },
 });
