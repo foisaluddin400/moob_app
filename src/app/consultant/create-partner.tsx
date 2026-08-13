@@ -50,7 +50,7 @@ export default function CreatePartner() {
             onPress={() => router.back()}
             activeOpacity={0.7}
           >
-            <Feather name="arrow-left" size={20} color="#00a9b5" />
+            <Feather name="arrow-left" size={20} color="#00B2B7" />
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Create partner</Text>
           <View style={{ width: 40 }} />
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
 
   /* Send Invitation Button */
   sendButton: {
-    backgroundColor: '#00a9b5',
+    backgroundColor: '#00B2B7',
     height: 48,
     borderRadius: 2,
     flexDirection: 'row',

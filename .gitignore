@@ -23,8 +23,6 @@ yarn-error.*
 *.tsbuildinfo
 
 # Environment / Secrets
-.env
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
@@ -38,9 +36,6 @@ Thumbs.db
 Desktop.ini
 
 # IDE / Editor
-.vscode/*
-!.vscode/extensions.json
-!.vscode/settings.json
 .idea/
 
 # Native / Signing
@@ -63,3 +58,8 @@ coverage/
 
 # Misc
 *.pem
+config.bat
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore

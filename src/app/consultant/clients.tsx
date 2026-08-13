@@ -28,7 +28,7 @@ export default function ClientsScreen() {
                 {/* Header */}
                 <View style={styles.header}>
                     <TouchableOpacity style={styles.backBtn} onPress={() => router.back()} activeOpacity={0.7}>
-                        <Feather name="arrow-left" size={18} color="#00a9b5" />
+                        <Feather name="arrow-left" size={18} color="#00B2B7" />
                     </TouchableOpacity>
                     <Text style={styles.headerTitle}>Clients</Text>
                     <View style={{ width: 36 }} />

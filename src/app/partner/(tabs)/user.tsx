@@ -12,7 +12,7 @@ export default function ConsultantUserTab() {
       {/* Profile Header Banner */}
       <TouchableOpacity
         style={styles.profileBanner}
-        onPress={() => router.push('/consultant/editProfile')}
+        onPress={() => router.push('/editProfile')}
         activeOpacity={0.8}
       >
         <Image
@@ -29,11 +29,11 @@ export default function ConsultantUserTab() {
       {/* Section: Workspace */}
       <Text style={styles.sectionHeader}>Workspace</Text>
       <View style={styles.groupCard}>
-        <TouchableOpacity style={styles.menuRow} onPress={() => router.push('/consultant/case')}>
+        <TouchableOpacity style={styles.menuRow} onPress={() => router.push('/partner/tasks')}>
           <View style={styles.iconContainer}>
             <Feather name="file-text" size={18} color="#0f172a" />
           </View>
-          <Text style={styles.rowLabel}>Cases</Text>
+          <Text style={styles.rowLabel}>Tasks</Text>
           <Feather name="chevron-right" size={18} color="#94a3b8" />
         </TouchableOpacity>
 
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
   },
   profileSubtitle: {
     fontSize: 12,
-    color: '#00a9b5',
+    color: '#00B2B7',
     marginTop: 2,
     fontFamily: 'Montserrat_400Regular',
   },
