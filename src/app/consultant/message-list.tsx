@@ -121,11 +121,11 @@ export default function MessageList() {
           onPress={() => router.back()}
           activeOpacity={0.7}
         >
-          <Feather name="arrow-left" size={20} color="#00a9b5" />
+          <Feather name="arrow-left" size={20} color="#00B2B7" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Message</Text>
         <TouchableOpacity style={styles.searchBtn} activeOpacity={0.7}>
-          <Feather name="search" size={20} color="#00a9b5" />
+          <Feather name="search" size={20} color="#00B2B7" />
         </TouchableOpacity>
       </View>
 
@@ -249,7 +249,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat_600SemiBold',
   },
   unreadBadge: {
-    backgroundColor: '#00a9b5',
+    backgroundColor: '#00B2B7',
     borderRadius: 10,
     minWidth: 20,
     height: 20,

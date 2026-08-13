@@ -31,7 +31,7 @@ export default function Setting() {
           onPress={() => router.back()}
           activeOpacity={0.7}
         >
-          <Feather name="arrow-left" size={20} color="#00a9b5" />
+          <Feather name="arrow-left" size={20} color="#00B2B7" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Settings</Text>
         <View style={{ width: 40 }} />
@@ -67,7 +67,7 @@ export default function Setting() {
                 {lang}
               </Text>
               {selectedLang === lang && (
-                <Feather name="check" size={18} color="#00a9b5" />
+                <Feather name="check" size={18} color="#00B2B7" />
               )}
             </TouchableOpacity>
           ))}
@@ -125,7 +125,7 @@ export default function Setting() {
 
         {/* Audit Log Warning Banner */}
         <View style={styles.auditBanner}>
-          <Feather name="info" size={16} color="#00a9b5" style={{ marginRight: 8, marginTop: 1 }} />
+          <Feather name="info" size={16} color="#00B2B7" style={{ marginRight: 8, marginTop: 1 }} />
           <Text style={styles.auditText}>
             Password changes are recorded in your account audit log.
           </Text>

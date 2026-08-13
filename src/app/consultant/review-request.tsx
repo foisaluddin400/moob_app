@@ -36,7 +36,7 @@ export default function ReviewRequest() {
             onPress={() => router.back()}
             activeOpacity={0.7}
           >
-            <Feather name="arrow-left" size={18} color="#00a9b5" />
+            <Feather name="arrow-left" size={18} color="#00B2B7" />
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Review request</Text>
           <View style={{ width: 36 }} />
@@ -56,7 +56,7 @@ export default function ReviewRequest() {
         {/* Client profile Card */}
         <View style={styles.card}>
           <View style={styles.cardHeaderRow}>
-            <Feather name="user" size={16} color="#00a9b5" />
+            <Feather name="user" size={16} color="#00B2B7" />
             <Text style={styles.cardTitle}>Client profile</Text>
           </View>
 
@@ -84,7 +84,7 @@ export default function ReviewRequest() {
         {/* Client context Card */}
         <View style={styles.card}>
           <View style={styles.cardHeaderRow}>
-            <Feather name="file-text" size={16} color="#00a9b5" />
+            <Feather name="file-text" size={16} color="#00B2B7" />
             <Text style={styles.cardTitle}>Client context</Text>
           </View>
 
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
   },
   reqCode: {
     fontSize: 13,
-    color: '#00a9b5',
+    color: '#00B2B7',
     fontWeight: '600',
     fontFamily: 'Montserrat_600SemiBold',
   },
@@ -223,7 +223,7 @@ const styles = StyleSheet.create({
   cardTitle: {
     fontSize: 15,
     fontWeight: '400',
-    color: '#00a9b5',
+    color: '#00B2B7',
     fontFamily: 'Montserrat_400Regular',
   },
   infoRow: {
@@ -275,7 +275,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat_400Regular',
   },
   primaryButton: {
-    backgroundColor: '#00a9b5',
+    backgroundColor: '#00B2B7',
     height: 48,
     borderRadius: 2,
     justifyContent: 'center',

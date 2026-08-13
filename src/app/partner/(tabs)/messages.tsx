@@ -271,7 +271,7 @@ const styles = StyleSheet.create({
     padding: 14,
   },
   outgoingBubble: {
-    backgroundColor: '#00a9b5', // Exact Teal Color from screenshot
+    backgroundColor: '#00B2B7', // Exact Teal Color from screenshot
     borderTopRightRadius: 2,
   },
   incomingBubble: {
