@@ -9,8 +9,8 @@ export default function RoleSelectionScreen() {
 
   const roles = [
     { title: 'Consultant', path: '/consultant/onboarding' },
-    { title: 'Partner', path: '/auth/partner/login' },
-    { title: 'Client', path: '/auth/client/login' },
+    { title: 'Partner', path: '/partner/onboarding' },
+    { title: 'Client', path: '/client/onboarding' },
   ];
 
   const handleRolePress = (title: string, path: string) => {

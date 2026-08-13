@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   StyleSheet,
   Text,
@@ -7,23 +7,27 @@ import {
   ScrollView,
   SafeAreaView,
   Image,
-} from 'react-native';
-import { Ionicons, Feather } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
+} from "react-native";
+import { Ionicons, Feather } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 
 export default function ClientDetailsScreen({ navigation }: any) {
-const router = useRouter();
+  const router = useRouter();
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
         {/* Header */}
-       <View style={styles.header}>
-                    <TouchableOpacity style={styles.backBtn} onPress={() => router.back()} activeOpacity={0.7}>
-                        <Feather name="arrow-left" size={18} color="#00a9b5" />
-                    </TouchableOpacity>
-                    <Text style={styles.headerTitle}>Client Profile</Text>
-                    <View style={{ width: 36 }} />
-                </View>
+        <View style={styles.header}>
+          <TouchableOpacity
+            style={styles.backBtn}
+            onPress={() => router.back()}
+            activeOpacity={0.7}
+          >
+            <Feather name="arrow-left" size={18} color="#00B2B7" />
+          </TouchableOpacity>
+          <Text style={styles.headerTitle}>Client Profile</Text>
+          <View style={{ width: 36 }} />
+        </View>
 
         <ScrollView
           showsVerticalScrollIndicator={false}
@@ -33,7 +37,9 @@ const router = useRouter();
           <View style={styles.profileCard}>
             <View style={styles.profileHeaderBox}>
               <Image
-                source={{ uri: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop' }}
+                source={{
+                  uri: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop",
+                }}
                 style={styles.profileImage}
               />
               <View style={styles.profileTitleSection}>
@@ -64,7 +70,7 @@ const router = useRouter();
             <TouchableOpacity
               style={styles.messageBtn}
               activeOpacity={0.8}
-              onPress={() => router.push('/consultant/client-message')}
+              onPress={() => router.push("/consultant/client-message")}
             >
               <Text style={styles.messageBtnText}>Message</Text>
             </TouchableOpacity>
@@ -91,8 +97,12 @@ const router = useRouter();
               <Ionicons name="chevron-forward" size={18} color="#cbd5e1" />
             </View>
             <View style={styles.caseFooter}>
-              <View style={[styles.statusBadge, { backgroundColor: '#e0f2fe' }]}>
-                <Text style={[styles.statusBadgeText, { color: '#0284c7' }]}>Under Review</Text>
+              <View
+                style={[styles.statusBadge, { backgroundColor: "#e0f2fe" }]}
+              >
+                <Text style={[styles.statusBadgeText, { color: "#0284c7" }]}>
+                  Under Review
+                </Text>
               </View>
               <Text style={styles.caseType}>Work Visa</Text>
             </View>
@@ -105,8 +115,12 @@ const router = useRouter();
               <Ionicons name="chevron-forward" size={18} color="#cbd5e1" />
             </View>
             <View style={styles.caseFooter}>
-              <View style={[styles.statusBadge, { backgroundColor: '#fef3c7' }]}>
-                <Text style={[styles.statusBadgeText, { color: '#d97706' }]}>Waiting for documents</Text>
+              <View
+                style={[styles.statusBadge, { backgroundColor: "#fef3c7" }]}
+              >
+                <Text style={[styles.statusBadgeText, { color: "#d97706" }]}>
+                  Waiting for documents
+                </Text>
               </View>
               <Text style={styles.caseType}>Student Visa</Text>
             </View>
@@ -115,7 +129,8 @@ const router = useRouter();
           {/* Note Box */}
           <View style={styles.noteBox}>
             <Text style={styles.noteText}>
-              New immigration cases are created after the client submits a request and a consultant approves the recommended process.
+              New immigration cases are created after the client submits a
+              request and a consultant approves the recommended process.
             </Text>
           </View>
         </ScrollView>
@@ -125,28 +140,28 @@ const router = useRouter();
 }
 
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: '#f8fafc' },
+  safeArea: { flex: 1, backgroundColor: "#f8fafc" },
   container: { flex: 1 },
   header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
     paddingHorizontal: 20,
     paddingVertical: 14,
-    backgroundColor: '#f8fafc',
+    backgroundColor: "#f8fafc",
   },
   backBtn: {
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: '#e6f7f7',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: "#e6f7f7",
+    justifyContent: "center",
+    alignItems: "center",
   },
   headerTitle: {
     fontSize: 18,
-    color: '#1e293b',
-    fontFamily: 'Montserrat_400Regular',
+    color: "#1e293b",
+    fontFamily: "Montserrat_400Regular",
   },
   scrollContent: {
     paddingHorizontal: 16,
@@ -154,16 +169,16 @@ const styles = StyleSheet.create({
     gap: 14,
   },
   profileCard: {
-    backgroundColor: '#ffffff',
+    backgroundColor: "#ffffff",
     borderRadius: 8,
     padding: 16,
     borderWidth: 1,
-    borderColor: '#f1f5f9',
+    borderColor: "#f1f5f9",
   },
   profileHeaderBox: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#EAFDFD',
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#EAFDFD",
     padding: 16,
     borderRadius: 8,
     gap: 14,
@@ -176,105 +191,105 @@ const styles = StyleSheet.create({
   profileTitleSection: { flex: 1 },
   profileName: {
     fontSize: 18,
-    color: '#0f172a',
+    color: "#0f172a",
     marginBottom: 4,
-    fontFamily: 'Montserrat_400Regular',
+    fontFamily: "Montserrat_400Regular",
   },
   activeTag: {
-    alignSelf: 'flex-start',
-    backgroundColor: '#c5c5b333',
+    alignSelf: "flex-start",
+    backgroundColor: "#c5c5b333",
     paddingHorizontal: 8,
     paddingVertical: 2,
     borderRadius: 4,
   },
   activeTagText: {
     fontSize: 11,
-    color: '#15803d',
-    fontFamily: 'Montserrat_400Regular',
+    color: "#15803d",
+    fontFamily: "Montserrat_400Regular",
   },
   contactList: {
     marginVertical: 16,
     gap: 10,
   },
   contactRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     gap: 10,
   },
   contactText: {
     fontSize: 14,
-    color: '#475569',
-    fontFamily: 'Montserrat_400Regular',
+    color: "#475569",
+    fontFamily: "Montserrat_400Regular",
   },
   messageBtn: {
-    backgroundColor: '#00B2B7',
+    backgroundColor: "#00B2B7",
     borderRadius: 6,
     paddingVertical: 14,
-    alignItems: 'center',
+    alignItems: "center",
   },
   messageBtnText: {
-    color: '#ffffff',
+    color: "#ffffff",
     fontSize: 15,
-    fontFamily: 'Montserrat_400Regular',
+    fontFamily: "Montserrat_400Regular",
   },
   card: {
-    backgroundColor: '#ffffff',
+    backgroundColor: "#ffffff",
     borderRadius: 8,
     padding: 16,
     borderWidth: 1,
-    borderColor: '#f1f5f9',
+    borderColor: "#f1f5f9",
   },
   gdprTitleRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     gap: 8,
     marginBottom: 10,
   },
   cardTitle: {
     fontSize: 15,
-    color: '#1e293b',
-    fontFamily: 'Montserrat_400Regular',
+    color: "#1e293b",
+    fontFamily: "Montserrat_400Regular",
   },
   consentBadge: {
-    alignSelf: 'flex-start',
-    backgroundColor: '#dcfce7',
+    alignSelf: "flex-start",
+    backgroundColor: "#dcfce7",
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 4,
   },
   consentBadgeText: {
     fontSize: 12,
-    color: '#16a34a',
-    fontFamily: 'Montserrat_400Regular',
+    color: "#16a34a",
+    fontFamily: "Montserrat_400Regular",
   },
   sectionHeader: {
     fontSize: 16,
-    color: '#1e293b',
+    color: "#1e293b",
     marginTop: 6,
-    fontFamily: 'Montserrat_400Regular',
+    fontFamily: "Montserrat_400Regular",
   },
   caseCard: {
-    backgroundColor: '#ffffff',
+    backgroundColor: "#ffffff",
     borderRadius: 8,
     padding: 16,
     borderWidth: 1,
-    borderColor: '#f1f5f9',
+    borderColor: "#f1f5f9",
   },
   caseRowHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
     marginBottom: 12,
   },
   caseName: {
     fontSize: 15,
-    color: '#1e293b',
-    fontFamily: 'Montserrat_400Regular',
+    color: "#1e293b",
+    fontFamily: "Montserrat_400Regular",
   },
   caseFooter: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   statusBadge: {
     paddingHorizontal: 10,
@@ -283,24 +298,24 @@ const styles = StyleSheet.create({
   },
   statusBadgeText: {
     fontSize: 12,
-    fontFamily: 'Montserrat_400Regular',
+    fontFamily: "Montserrat_400Regular",
   },
   caseType: {
     fontSize: 12,
-    color: '#94a3b8',
-    fontFamily: 'Montserrat_400Regular',
+    color: "#94a3b8",
+    fontFamily: "Montserrat_400Regular",
   },
   noteBox: {
-    backgroundColor: '#e6f7f7',
+    backgroundColor: "#e6f7f7",
     borderRadius: 8,
     padding: 14,
     borderWidth: 1,
-    borderColor: '#ccf0f0',
+    borderColor: "#ccf0f0",
   },
   noteText: {
     fontSize: 12,
-    color: '#008080',
+    color: "#008080",
     lineHeight: 17,
-    fontFamily: 'Montserrat_400Regular',
+    fontFamily: "Montserrat_400Regular",
   },
 });

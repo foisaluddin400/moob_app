@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#00a9b5',
+    color: '#00B2B7',
     marginBottom: 8,
     fontFamily: 'Montserrat_600SemiBold',
   },

@@ -42,7 +42,7 @@ export default function PartnerManagement() {
           onPress={() => router.back()}
           activeOpacity={0.7}
         >
-          <Feather name="arrow-left" size={20} color="#00a9b5" />
+          <Feather name="arrow-left" size={20} color="#00B2B7" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Partner management</Text>
         <View style={{ width: 40 }} />
@@ -76,7 +76,7 @@ export default function PartnerManagement() {
             <View style={styles.cardHeaderRow}>
               {/* Avatar Placeholder */}
               <View style={styles.avatarBox}>
-                <Feather name="user" size={32} color="#00a9b5" />
+                <Feather name="user" size={32} color="#00B2B7" />
               </View>
 
               {/* Info Section */}

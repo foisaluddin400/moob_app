@@ -24,7 +24,7 @@ export default function PreviewRequest() {
                 {/* Header */}
                 <View style={styles.header}>
                     <TouchableOpacity style={styles.backBtn} onPress={() => router.back()} activeOpacity={0.7}>
-                        <Feather name="arrow-left" size={18} color="#00a9b5" />
+                        <Feather name="arrow-left" size={18} color="#00B2B7" />
                     </TouchableOpacity>
                     <Text style={styles.headerTitle}>Preview Request</Text>
                     <View style={{ width: 36 }} />
@@ -42,7 +42,7 @@ export default function PreviewRequest() {
                 {/* Client profile */}
                 <View style={styles.card}>
                     <View style={styles.cardTitleRow}>
-                        <Feather name="user" size={16} color="#00a9b5" />
+                        <Feather name="user" size={16} color="#00B2B7" />
                         <Text style={styles.cardTitle}>Client profile</Text>
                     </View>
                     <View>
@@ -71,7 +71,7 @@ export default function PreviewRequest() {
 
                 <View style={styles.card}>
                     <View style={styles.cardTitleRow}>
-                        <Feather name="file-text" size={16} color="#00a9b5" />
+                        <Feather name="file-text" size={16} color="#00B2B7" />
                         <Text style={styles.cardTitle}>Request details</Text>
                     </View>
                     <View style={styles.gridRow}><Text style={styles.label}>PURPOSE</Text><Text style={styles.value}>Citizenship</Text></View>
@@ -91,7 +91,7 @@ export default function PreviewRequest() {
                     <View key={index} style={styles.docCard}>
                         <View style={styles.docCardHeader}>
                             <View style={styles.docHeaderLeft}>
-                                <Feather name="file-text" size={18} color="#00a9b5" />
+                                <Feather name="file-text" size={18} color="#00B2B7" />
                                 <View>
                                     <Text style={styles.docName}>Elena Rodriguez</Text>
                                     <Text style={styles.docMeta}>bank-statement.jpg · Image · 1p · Just now</Text>
@@ -105,11 +105,11 @@ export default function PreviewRequest() {
                         {/* AI Analysis Bar */}
                         <View style={styles.aiBar}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                                <Feather name="maximize" size={14} color="#00a9b5" />
+                                <Feather name="maximize" size={14} color="#00B2B7" />
                                 <Text style={styles.aiTitle}>AI analysis</Text>
                             </View>
                             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
-                                <Feather name="pie-chart" size={12} color="#00a9b5" />
+                                <Feather name="pie-chart" size={12} color="#00B2B7" />
                                 <Text style={styles.aiScore}>91%</Text>
                             </View>
                         </View>
@@ -145,7 +145,7 @@ export default function PreviewRequest() {
                 </TouchableOpacity>
   <View style={styles.guidanceBanner}>
                     <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 4 }}>
-                        <Feather name="check-square" size={16} color="#00a9b5" />
+                        <Feather name="check-square" size={16} color="#00B2B7" />
                         <Text style={styles.guidanceTitle}>Immigration guidance</Text>
                     </View>
                     <Text style={styles.guidanceText}>
@@ -201,13 +201,13 @@ const styles = StyleSheet.create({
     headerTitle: { fontSize: 16, fontWeight: '600', color: '#0f172a', fontFamily: 'Montserrat_600SemiBold' },
     reqBanner: { backgroundColor: '#eafdfd', borderWidth: 1, borderColor: '#b2f5f8', padding: 14, borderRadius: 4, marginBottom: 14 },
     reqHeaderRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 },
-    reqCode: { fontSize: 13, color: '#00a9b5', fontWeight: '600', fontFamily: 'Montserrat_600SemiBold' },
+    reqCode: { fontSize: 13, color: '#00B2B7', fontWeight: '600', fontFamily: 'Montserrat_600SemiBold' },
     badge: { backgroundColor: '#eafdfd', paddingHorizontal: 8, paddingVertical: 2, borderRadius: 3 },
-    badgeText: { fontSize: 11, color: '#00a9b5', fontFamily: 'Montserrat_400Regular' },
+    badgeText: { fontSize: 11, color: '#00B2B7', fontFamily: 'Montserrat_400Regular' },
     reqTitle: { fontSize: 18, fontWeight: '700', color: '#0f172a', fontFamily: 'Montserrat_700Bold' },
     card: { backgroundColor: '#FFFFFF', borderWidth: 1, borderColor: '#F2F2F2', borderRadius: 4, padding: 14, marginBottom: 12 },
     cardTitleRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 10 },
-    cardTitle: { fontSize: 15, fontWeight: '500', color: '#00a9b5', fontFamily: 'Montserrat_500Medium' },
+    cardTitle: { fontSize: 15, fontWeight: '500', color: '#00B2B7', fontFamily: 'Montserrat_500Medium' },
     infoLine: { fontSize: 13, color: '#475569', marginBottom: 6, fontFamily: 'Montserrat_400Regular' },
     docCard: { backgroundColor: '#ffffff', borderWidth: 1, borderColor: '#f1f5f9', borderRadius: 4, padding: 12, marginBottom: 12 },
     docCardHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 10 },
@@ -217,26 +217,26 @@ const styles = StyleSheet.create({
     consultantTag: { backgroundColor: '#fef3c7', paddingHorizontal: 6, paddingVertical: 2, borderRadius: 3 },
     consultantTagText: { fontSize: 10, color: '#d97706', fontWeight: '500', fontFamily: 'Montserrat_500Medium' },
     aiBar: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#F0FDFE', padding: 8, borderColor:'#C4F7FC', borderWidth:1, borderRadius: 4, marginBottom: 10 },
-    aiTitle: { fontSize: 12, color: '#00a9b5', fontWeight: '500', fontFamily: 'Montserrat_500Medium' },
-    aiScore: { fontSize: 12, color: '#00a9b5', fontWeight: '600', fontFamily: 'Montserrat_600SemiBold' },
+    aiTitle: { fontSize: 12, color: '#00B2B7', fontWeight: '500', fontFamily: 'Montserrat_500Medium' },
+    aiScore: { fontSize: 12, color: '#00B2B7', fontWeight: '600', fontFamily: 'Montserrat_600SemiBold' },
     actionRow: { flexDirection: 'row', gap: 8 },
     actionBtn: { flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: 4, height: 34, borderRadius: 4 },
     approveBtn: { backgroundColor: '#F0FDF4' },
     rejectBtn: { backgroundColor: '#fef2f2' },
     previewBtn: { backgroundColor: '#f1f5f9' },
       guidanceBanner: { backgroundColor: '#ffffff', borderWidth: 1, borderColor: '#f1f5f9', padding: 14, borderRadius: 4, marginBottom: 20 },
-    guidanceTitle: { fontSize: 14, fontWeight: '600', color: '#00a9b5', fontFamily: 'Montserrat_600SemiBold' },
+    guidanceTitle: { fontSize: 14, fontWeight: '600', color: '#00B2B7', fontFamily: 'Montserrat_600SemiBold' },
     guidanceText: { fontSize: 12, color: '#64748b', lineHeight: 18, fontFamily: 'Montserrat_400Regular' },
     actionText: { fontSize: 12, fontWeight: '500', fontFamily: 'Montserrat_500Medium' },
     sectionHeader: { fontSize: 14, fontWeight: '500', color: '#0f172a', marginBottom: 8, fontFamily: 'Montserrat_500Medium' },
     textArea: { backgroundColor: '#ffffff', borderWidth: 1, borderColor: '#e2e8f0', borderRadius: 4, height: 90, padding: 10, textAlignVertical: 'top', fontSize: 13, color: '#334155', fontFamily: 'Montserrat_400Regular' },
     saveNotesBtn: { alignSelf: 'flex-start', backgroundColor: '#f1f5f9', paddingHorizontal: 12, paddingVertical: 6, borderRadius: 4, marginTop: 8, marginBottom: 20 },
     saveNotesText: { fontSize: 12, color: '#475569', fontWeight: '500', fontFamily: 'Montserrat_500Medium' },
-    primaryBtn: { backgroundColor: '#00a9b5', height: 48, borderRadius: 2, justifyContent: 'center', alignItems: 'center' },
+    primaryBtn: { backgroundColor: '#00B2B7', height: 48, borderRadius: 2, justifyContent: 'center', alignItems: 'center' },
     primaryBtnText: { color: '#ffffff', fontSize: 14, fontWeight: '600', fontFamily: 'Montserrat_600SemiBold' },
     modalOverlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.4)', justifyContent: 'flex-end' },
     bottomSheet: { backgroundColor: '#ffffff', borderTopLeftRadius: 16, borderTopRightRadius: 16, padding: 20 },
     handleBar: { width: 36, height: 4, backgroundColor: '#cbd5e1', borderRadius: 2, alignSelf: 'center', marginBottom: 16 },
-    modalTitle: { fontSize: 16, fontWeight: '600', color: '#00a9b5', marginBottom: 8, fontFamily: 'Montserrat_600SemiBold' },
+    modalTitle: { fontSize: 16, fontWeight: '600', color: '#00B2B7', marginBottom: 8, fontFamily: 'Montserrat_600SemiBold' },
     modalSub: { fontSize: 13, color: '#64748b', marginBottom: 20, lineHeight: 18, fontFamily: 'Montserrat_400Regular' },
 });
